@@ -1,4 +1,9 @@
 #
+ 16 registers . R0-R15.
+ 
+ R15 = stack pointer.
+
+#
 opcodes
 
 | Name      | Description | Args | Size | OP |
@@ -33,6 +38,8 @@ opcodes
 |  |  | | |
 | BRA | Branch Always to address in Ra | [Ra] | 2 |
 | BRA | Branch Always to absolute address  | $ffffffff | 5 |
+| BSR | Branch Subroutine to address in Ra | [Ra] | 2 |
+| BSR | Branch Subroutine to absolute address  | $ffffffff | 5 |
 | BEQ | Branch flag == to address in Ra | [Ra] | 2 |
 | BEQ | Branch flag == to absolute address  | $ffffffff | 5 |
 | BNE | Branch flag != to address in Ra | [Ra] | 2 |
@@ -41,3 +48,6 @@ opcodes
 | BLS | Branch sign flag < to absolute address  | $ffffffff | 5 |
 | BGT | Branch sign flag > to address in Ra | [Ra] | 2 |
 | BGT | Branch sign flag > to absolute address  | $ffffffff | 5 |
+
+
+
